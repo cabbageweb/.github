@@ -16,9 +16,9 @@ jobs:
 
     steps:
       - name: generate snake.svg
-        uses: Platane/snk/svg-only@v3
+        uses: Platane/snk/svg-only@v2
         with:
-          github_user_name: cabbageofficial
+          github_user_name: ${{ github.cabbageofficial }}
           outputs: dist/snake.svg
 
 
@@ -28,4 +28,4 @@ jobs:
           target_branch: output
           build_dir: dist
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.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 }}
